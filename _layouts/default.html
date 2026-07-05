@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} — Runsegue</title>
+    <meta name="description" content="{{ page.description }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { DEFAULT: '#f59e0b', dark: '#0f172a', muted: '#94a3b8' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-white antialiased">
+    <header class="border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="{{ page.lang | prepend: '/' | append: '/' }}" class="font-bold text-xl tracking-tight">
+                Run<span class="text-brand">segue</span>
+            </a>
+            <nav class="flex gap-4 text-sm text-brand-muted">
+                <a href="https://github.com/Runsegue/Runsegue" class="hover:text-white">GitHub</a>
+                {% if page.lang == 'it' %}
+                <a href="/en/" class="hover:text-white">EN</a>
+                {% else %}
+                <a href="/it/" class="hover:text-white">IT</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    {{ content }}
+    <footer class="border-t border-white/10 mt-20 py-8 text-center text-sm text-brand-muted">
+        <p>Runsegue · MIT · <a href="https://antoniotrento.net" class="hover:text-white">Antonio Trento</a></p>
+    </footer>
+</body>
+</html>

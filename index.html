@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runsegue</title>
+    <script>
+        (function () {
+            var lang = navigator.language || navigator.userLanguage;
+            window.location.replace(lang.startsWith('it') ? '/it/' : '/en/');
+        })();
+    </script>
+    <meta http-equiv="refresh" content="0;url=/en/">
+</head>
+<body style="background:#0f172a;color:#fff;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;">
+    <p><a href="/en/" style="color:#fbbf24;">English</a> · <a href="/it/" style="color:#fbbf24;">Italiano</a></p>
+</body>
+</html>

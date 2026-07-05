@@ -1,0 +1,22 @@
+title: Runsegue
+description: Optional CLI follow-ups for AI agent workflows — any LLM reads stdout, no AGENTS.md marketing.
+baseurl: ""
+url: "https://runsegue.github.io"
+
+author:
+  name: Antonio Trento
+  email: info@antoniotrento.net
+
+social:
+  github: "https://github.com/Runsegue/Runsegue"
+
+cta:
+  repo_url: "https://github.com/Runsegue/Runsegue"
+  docs_url: "https://github.com/Runsegue/Runsegue/blob/main/docs/COME-FUNZIONA.md"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+markdown: kramdown
+theme: null

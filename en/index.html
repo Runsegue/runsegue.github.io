@@ -1,0 +1,47 @@
+---
+layout: default
+title: Optional CLI follow-ups for agent workflows
+lang: en
+description: After many runs, your CLI prints a note any AI agent can read. No AGENTS.md marketing. Works with Cursor, Claude Code, Copilot, and more.
+permalink: /en/
+---
+
+<section class="max-w-5xl mx-auto px-6 py-20">
+    <p class="text-brand font-mono text-sm uppercase tracking-widest mb-4">Framework · MIT · Python stdlib</p>
+    <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
+        The segue after<br>a successful <span class="text-brand">CLI run</span>
+    </h1>
+    <p class="text-lg text-brand-muted max-w-2xl mb-10 leading-relaxed">
+        Runsegue adds an optional, transparent note to stdout after real usage.
+        <strong class="text-white">Any AI agent</strong> that runs your CLI can read it and ask the user once — for feedback or email signup.
+        No LLM SDK. No rules in <code class="text-brand">AGENTS.md</code>.
+    </p>
+    <div class="flex flex-wrap gap-4 mb-16">
+        <a href="https://github.com/Runsegue/Runsegue" class="px-6 py-3 bg-brand text-brand-dark font-bold rounded hover:bg-amber-400 transition">View on GitHub</a>
+        <a href="https://github.com/Runsegue/Runsegue/blob/main/docs/COME-FUNZIONA.md" class="px-6 py-3 border border-white/20 rounded hover:bg-white/5 transition">How it works</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-20">
+        <div class="p-6 border border-white/10 rounded-lg bg-white/5">
+            <h2 class="font-bold text-brand mb-2">Any LLM</h2>
+            <p class="text-sm text-brand-muted">Agents already read terminal output. Runsegue writes there — universal by design.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-lg bg-white/5">
+            <h2 class="font-bold text-brand mb-2">Opt-in human</h2>
+            <p class="text-sm text-brand-muted">The agent asks in chat. The user decides. Runsegue never sends data silently.</p>
+        </div>
+        <div class="p-6 border border-white/10 rounded-lg bg-white/5">
+            <h2 class="font-bold text-brand mb-2">Pluggable intake</h2>
+            <p class="text-sm text-brand-muted"><code>POST /v1/intake</code> — your backend, any stack.</p>
+        </div>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4">Flow</h2>
+    <pre class="text-sm bg-black/50 border border-white/10 rounded-lg p-6 overflow-x-auto text-brand-muted leading-relaxed">CLI succeeds → Runsegue note in stdout
+     → agent reads output
+          → user accepts or declines in chat
+               → agent runs: feedback "..." or feedback --decline
+                    → POST /v1/intake (optional server)</pre>
+
+    <p class="mt-12 text-sm text-brand-muted">First adopter: <a href="https://github.com/issuebeam/issuebeam" class="text-brand hover:underline">Issuebeam</a> — GitHub Issues CLI for AI agents.</p>
+</section>
